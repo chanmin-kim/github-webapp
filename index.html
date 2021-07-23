@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Stars</title>
+    <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+    <div class="main" style="text-align:left">
+        <h1>GitHub Stars</h1>
+
+        <input class="tab-bar" id="tab1" type="radio" name="tabs" checked> 
+        <label for="tab1">API</label>
+     
+        <input class="tab-bar" id="tab2" type="radio" name="tabs">
+        <label for="tab2">로컬</label>
+     
+     
+        <section id="content1" style="margin-bottom:20px;">
+            <h1>깃허브 검색 기능</h1>
+            <form class="githubSearchbar">
+                <input type="text" placeholder="검색어를 입력해주세요">
+                
+            </form>
+        </section>
+     
+        <section id="content2" style="margin-bottom:20px;">
+            <h1>로컬저장소 검색 기능</h1>
+            <form class="localSearchbar" id="localsearch">
+                <input type="text" placeholder="검색어를 입력해주세요">
+                <button>검색</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="githubapi.js"></script>
+    <script src="favorite.js"></script>
+    <script src="localsearch.js"></script>
+</body>
+</html>

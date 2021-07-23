@@ -1,0 +1,94 @@
+.main {
+    min-width: 320px;
+    max-width: 800px;
+    padding: 10px;    
+    border-radius: 7px;;        
+    background: #ffffff;
+}
+
+section {
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #ddd;
+}
+
+.tab-bar {
+      display: none;
+}
+
+label {
+    display: inline-block;
+    padding: 15px 25px;
+    font-weight: 600;
+    color: #bbb;
+    border: 1px solid transparent;
+}
+
+label:hover {
+    color: #2e9cdf;
+    cursor: pointer;
+}
+
+.tab-bar:checked + label {
+      color: #555;
+      border: 1px solid #ddd;
+      border-top: 2px solid #2e9cdf;
+      border-bottom: 1px solid #ffffff;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2{
+    display: block;
+}
+
+.githubSearchbar {
+    height: 40px;
+    width: 400px;
+    border: 1px solid #1b5ac2;
+    background: #ffffff;
+}
+
+.githubSearchbar > input {
+    font-size: 16px;
+    width: 325px;
+    padding: 10px;
+    border: 0px;
+    outline: none;
+    float: left;
+}
+
+.githubSearchbar > button {
+    width: 50px;
+    height: 100%;
+    border: 0px;
+    background: #1b5ac2;
+    outline: none;
+    float: right;
+    color: #ffffff;
+}
+
+.localSearchbar {
+    height: 40px;
+    width: 400px;
+    border: 1px solid #1b5ac2;
+    background: #ffffff;
+}
+
+.localSearchbar > input {
+    font-size: 16px;
+    width: 325px;
+    padding: 10px;
+    border: 0px;
+    outline: none;
+    float: left;
+}
+
+.localSearchbar > button {
+    width: 50px;
+    height: 100%;
+    border: 0px;
+    background: #1b5ac2;
+    outline: none;
+    float: right;
+    color: #ffffff;
+}
