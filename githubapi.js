@@ -1,3 +1,5 @@
+import { favorite } from './favorite.js';
+
 const githubForm = document.querySelector(".githubSearchbar"),
     githubInput = githubForm.querySelector("input"),
     githubList = document.querySelector(".github-userList");
@@ -9,10 +11,11 @@ function saveUsers(){
     localStorage.setItem(USERS_LS, JSON.stringify(users));
 }
 
+// 토큰이 만료되었는지 체크필요
 async function getUsers(keyword){
     const headers = {
         Accept: "application/vnd.github.v3+json",
-        Authorization: `token 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`
+        Authorization: `token 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`
     }
     let url = `https://api.github.com/search/users?q=${keyword}&per_page=100`
     let response = await fetch(url, {
@@ -44,6 +47,7 @@ function paintUsers(eachUser){
     userName.innerText = eachUser.login;
     starMarker.id = eachUser.id;
     starMarker.innerText = "★";
+    starMarker.addEventListener("click", favorite);
 
     li.appendChild(profile);
     li.appendChild(userName);
@@ -56,6 +60,7 @@ function loadUsers(){
     let loadedUsers = localStorage.getItem(USERS_LS);
     if (loadedUsers !== null){
         let parsedUsers = JSON.parse(loadedUsers);
+        // console.log(parsedUsers);
         let selectedUsers = parsedUsers[0]["items"];
         for (var i=0; i < 100; i++){
             console.log(selectedUsers[i]);

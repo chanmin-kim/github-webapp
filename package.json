@@ -1,10 +1,11 @@
 {
   "name": "github-webapp",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "index.html",
+    "start": "npx http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
